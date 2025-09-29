@@ -8,7 +8,7 @@ This repository includes all the code used in our study on monitoring and foreca
 ### Installation
 To avoid any dependency issues, please install requirements.txt first.
 ```
-git clone git@github.com:yilmajung/HOMELESS_STUDY_EPJDS_2025_v3.git
+git clone https://github.com/yilmajung/HOMELESS_STUDY_EPJDS_2025_v3.git
 pip install -r requirements.txt
 pip install -e .
 ```
