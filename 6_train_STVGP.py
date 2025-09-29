@@ -151,7 +151,7 @@ class STVGPModel(gpytorch.models.ApproximateGP):
         Kc = self.covariate_kernel(c)
         Kconst = self.const_kernel(s)
 
-        covar = (Ks * Kt * Kc) + (Ks * Kt) + Ks + Kt + Kc + Kconst
+        covar = (Ks * Kt * Kc) + Ks + Kt + Kc + Kconst
         covar = covar + torch.eye(covar.size(-1), device=x.device) * 1e-3  # jitter
         return gpytorch.distributions.MultivariateNormal(mean_x, covar)
 
