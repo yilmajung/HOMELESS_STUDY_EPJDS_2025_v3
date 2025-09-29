@@ -100,10 +100,10 @@ y = y_counts.astype(np.float32)
 
 scaler = StandardScaler().fit(t)
 x_scaled = scaler.transform(t).astype(np.float32)
-joblib.dump(scaler, "scaler_pois_t400r300_withamenities_parquet_2way.joblib")
+joblib.dump(scaler, "scaler_pois_t400r300_withamenities_parquet.joblib")
 
 log_y_mean = np.log(y.mean() + 1e-3).astype(np.float32)
-joblib.dump(log_y_mean, "constant_mean_t400r300_withamenities_parquet_2way.pkl")
+joblib.dump(log_y_mean, "constant_mean_t400r300_withamenities_parquet.pkl")
 
 train_x = torch.tensor(x_scaled, dtype=torch.float32)
 train_y = torch.tensor(y, dtype=torch.float32)
@@ -254,6 +254,6 @@ for epoch in tqdm(range(500)):
         print(" scale_tril diag[:5]:", vd.chol_variational_covar.diag()[:5].cpu().detach().numpy())
 
 # Save
-torch.save(model.state_dict(), 'stvgp_pois_t400r300_withamenities_parquet_2way.pth')
-torch.save(likelihood.state_dict(), 'likelihood_pois_t400r300_withamenities_parquet_2way.pth')
-torch.save(inducing_points, 'inducing_points_pois_t400r300_withamenities_parquet_2way.pt')
+torch.save(model.state_dict(), 'stvgp_pois_t400r300_withamenities_parquet.pth')
+torch.save(likelihood.state_dict(), 'likelihood_pois_t400r300_withamenities_parquet.pth')
+torch.save(inducing_points, 'inducing_points_pois_t400r300_withamenities_parquet.pt')
