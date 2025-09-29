@@ -3,7 +3,7 @@
 
 This repository includes all the code used in our study on monitoring and forecasting homeless tents through crowdsourced data. The figure below illustrates the overall process of our work. By following the workflow and using the provided Python code or Jupyter Notebook, our results should be reproducible. The data we used can be obtained only upon request. To request the dataset, please contact me at wjung@psu.edu.
 
-!('![/Users/wooyongjung/WJ_Projects/HOMELESS_STUDY_EPJDS_2025_v3/figure/fig_overall_framework.png](https://github.com/yilmajung/HOMELESS_STUDY_EPJDS_2025_v3/blob/master/figure/fig_overall_framework.png)')
+![/Users/wooyongjung/WJ_Projects/HOMELESS_STUDY_EPJDS_2025_v3/figure/fig_overall_framework.png](https://github.com/yilmajung/HOMELESS_STUDY_EPJDS_2025_v3/blob/master/figure/fig_overall_framework.png)')
 
 ### Installation
 To avoid any dependency issues, please install requirements.txt first.
