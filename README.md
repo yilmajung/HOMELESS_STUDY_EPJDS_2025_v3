@@ -14,14 +14,14 @@ pip install -e .
 ```
 
 ### Run
-1. Data Preparation
+1. **Data Preparation**
     - Gather homeless tent information from street-view images:  `1_extract_streetview_images.ipynb` → `2_detect_tents_GroundingDino.py` → YOLO classifier (use weights in the YOLO folder)
 
     - Gather amenity and structure information: `4_extract_amenity_OverPass.py`
 
     - Combine all crowdsourced data: `3_combine_311_data.ipynb` → `5_combine_amenity_w_main.py`
 
-2. Spatiotemporal Analysis
+2. **Spatiotemporal Analysis**
     - Train and Predict ST-VGP Model: `6_train_STVGP.py` → `7_predict_STVGP.py`
 
     - Aggregate the bounding-box level results to city-level: `8_aggregate_MC.ipynb`
@@ -29,7 +29,7 @@ pip install -e .
     - Feature analysis: `9_check_importance.py`
 
 
-3. Model Evaluation
+3. **Model Evaluation**
     - Compare model performance: `10_0_compare_w_baseline_thres.py` → `10_1_compare_w_baseline_visualize.ipynb`
     - Ablation study: run the same process above using codes in ablation_study folder
 
